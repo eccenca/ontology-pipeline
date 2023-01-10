@@ -74,11 +74,10 @@ instances_graph_iri:
     default: http://data.example.org
     when: "{{ instances }}"
 
-instances_cmem_id:
+cmem_id:
     type: str
-    help: What is your CMEM instance with the instance data?
+    help: What is your CMEM instance with which you want to sync?
     default: local
-    when: "{{ instances }}"
 
 git_user_name:
     type: str
