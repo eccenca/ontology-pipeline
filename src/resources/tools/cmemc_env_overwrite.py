@@ -4,6 +4,23 @@ import os
 import sys
 from configparser import ConfigParser
 
+"""Replace values by environment variables in an ini file.
+
+Call this script with
+
+```
+python cmemc_env_overwrite.py ini_file config-section env_vars …
+```
+
+e.g.
+```
+python cmemc_env_overwrite.py cmemc.ini instance.eccenca.dev OAUTH_CLIENT_ID OAUTH_CLIENT_SECRET
+```
+
+It inserts (writes) the keys and their values to the ini file.
+
+"""
+
 config_file = sys.argv[1]
 config_section = sys.argv[2]
 

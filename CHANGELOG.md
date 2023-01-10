@@ -18,7 +18,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Changed
 
--
+- Add documentation to the `cmemc_env_overwrite.py` script
 
 ## [0.1.0] 2023-01-10
 
