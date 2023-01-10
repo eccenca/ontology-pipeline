@@ -14,11 +14,12 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Fixed
 
--
+- Fix file names for graph files in README
 
 ### Changed
 
 - Update CHANGELOG
+- Quote git username in env file
 
 
 ## [0.0.5] 2023-01-10
