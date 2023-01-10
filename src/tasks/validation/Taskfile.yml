@@ -1,7 +1,7 @@
 version: '3'
 
 vars:
-  SHELL_MANUALFILES: "./resources/tests"
+  SHELL_MANUALFILES: "{{.SHELL_PWD}}/resources/tests"
   DOCKER_MANUALFILES: "/resources/tests"
   MANUALFILES:
     sh: 'echo {{.SHELL_MANUALFILES}}/*.ttl | sed -e "s: :,:g" | sed -e "s:{{.SHELL_MANUALFILES}}:{{.DOCKER_MANUALFILES}}:g"'
