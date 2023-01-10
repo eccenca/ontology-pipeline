@@ -2,7 +2,7 @@ version: '3'
 
 vars:
   CMEMC_IMAGE: docker-registry.eccenca.com/eccenca-cmemc
-  CMEMC_PARAMS_DEFAULT: "-v {{.CMEMC_CONFIG}}:/cmemc.ini"
+  CMEMC_PARAMS_DEFAULT: "-v {{.SHELL_PWD}}/{{.CMEMC_CONFIG}}:/cmemc.ini"
   CMEMC_PARAMS:
     sh: if [ -z "{{.CMEMC_PARAMS}}" ]; then echo "{{.CMEMC_PARAMS_DEFAULT}}"; else echo "{{.CMEMC_PARAMS}}"; fi
   CMEMC_CMD: docker run --rm {{.CMEMC_PARAMS}} {{.DOCKER_DIRS}} {{.CMEMC_IMAGE}}
