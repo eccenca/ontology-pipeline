@@ -27,6 +27,11 @@ You can now execute the ontology pipeline:
 
 If you have selected a CI option, your CI should execute the ontology pipeline.
 
+## What it does
+
+To be done
+
+basically it fetches your ontology from cmem, commits it to the repo, does some steps on it, commits the results and then imports the resulting ontology to cmem again.
 
 ## TODO
 - Shape generation
@@ -38,6 +43,8 @@ If you have selected a CI option, your CI should execute the ontology pipeline.
 - Entity Map
 - Analyze Shapes and Ontology
   - overlapping terms
+- Integrate workflow for contribution to the ontology via the repository as well
+- Support multiple cmem instances to sync to. (Maybe this should be the task of something like github action environment, maybe it should be independent of github, …)
 
 ## Out if Scope
 - Get DI projects
