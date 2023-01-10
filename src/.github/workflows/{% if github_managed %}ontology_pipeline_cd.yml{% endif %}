@@ -9,6 +9,7 @@ env:
   BRANCH: main
   OAUTH_CLIENT_ID: ${{ secrets.CMEM_OAUTH_CLIENT_ID }}
   OAUTH_CLIENT_SECRET: ${{ secrets.CMEM_OAUTH_CLIENT_SECRET }}
+  CMEMC_ENV_OVERWRITE: True
 
 jobs:
   pipeline:
