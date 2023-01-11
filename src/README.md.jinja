@@ -23,3 +23,16 @@ To execute the ontology pipeline you need:
 ## Usage
 
 In the directory `resources/queries/` you can add files with [SPARQL 1.1 Construct](https://www.w3.org/TR/sparql11-query/#construct) queries to extract data from your cmem instance during the run.
+
+## Build Artifacts
+
+The build artifacts are generated in the directory `artifacts`. In the GitHub Action Workflow the artifacts are attached to a successful build.
+
+### Pipeline artifacts
+- The Ontology Documentation:
+  - `schema-documentation.html`
+- The RDFUnit test results:
+  - `check-rdfunit-auto-results.html`
+  - `check-rdfunit-auto-results.xml`
+  - `check-rdfunit-manual-results.html`
+  - `check-rdfunit-manual-results.xml`

@@ -10,7 +10,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Add
 
--
+- Add list of generated artifacts to the README template
 
 ### Fixed
 
