@@ -1,9 +1,14 @@
 # Ontology Pipeline
 
 ## Requirements
-- [docker](https://www.docker.com/), [podman](https://podman.io/), or a compatible container engine
-- [task](https://taskfile.dev/)
-- [copier](https://copier.readthedocs.io/)
+
+To initialize an ontology repository with the ontology pipeline and update it you need:
+- [Copier](https://copier.readthedocs.io/) (runs on Python 3)
+
+To execute the ontology pipeline you need:
+- [Task](https://taskfile.dev/)
+- [Docker](https://www.docker.com/), [Podman](https://podman.io/), or a compatible container engine
+- [Python 3](https://www.python.org/)
 
 ## How to use
 
