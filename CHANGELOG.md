@@ -10,7 +10,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Add
 
-- Add list of generated artifacts to the README template
+-
 
 ### Fixed
 
@@ -19,6 +19,12 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 ### Changed
 
 -
+
+## [0.1.2] 2023-01-11
+
+### Add
+
+- Add list of generated artifacts to the README template
 
 ## [0.1.1] 2023-01-11
 
