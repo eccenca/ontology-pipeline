@@ -74,7 +74,7 @@ instances_graph_iri:
     default: http://data.example.org
     when: "{{ instances }}"
 
-cmem_id:
+cmemc_config_id:
     type: str
     help: What is your CMEM instance with which you want to sync?
     default: local
