@@ -20,6 +20,8 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 - Add documentation to the `cmemc_env_overwrite.py` script
 - Rename `cmem_id` to `cmemc_config_id`
+- Update README template, clarify `.gitignore`
+- Update README, add TODOs
 
 ## [0.1.0] 2023-01-10
 

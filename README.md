@@ -33,6 +33,7 @@ Basically it fetches your ontology from cmem, commits it to the repo, does some 
 
 ## TODO
 - Initial generation of turtle files
+- How to deal with `.gitignore` and similar files updated and used by multiple tools
 - Resolve prefixes entered during copier run (is this possible with copier?)
 - Shape generation
   - get combined ontology/ontology with all imports
