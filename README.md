@@ -11,7 +11,7 @@ Go to an existing ontology repository or create a new one.
 Execute
 
 ```
-copier copy ssh://git@gitlab.eccenca.com:8101/devops/ontology-pipeline.git .
+copier ssh://git@gitlab.eccenca.com:8101/devops/ontology-pipeline.git .
 ```
 
 Answer the questions.
@@ -29,11 +29,11 @@ If you have selected a CI option, your CI should execute the ontology pipeline.
 
 ## What it does
 
-To be done
-
-basically it fetches your ontology from cmem, commits it to the repo, does some steps on it, commits the results and then imports the resulting ontology to cmem again.
+Basically it fetches your ontology from cmem, commits it to the repo, does some steps on it, commits the results and then imports the resulting ontology to cmem again.
 
 ## TODO
+- Initial generation of turtle files
+- Resolve prefixes entered during copier run (is this possible with copier?)
 - Shape generation
   - get combined ontology/ontology with all imports
   - shapes from ontology
