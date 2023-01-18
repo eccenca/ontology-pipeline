@@ -16,7 +16,7 @@ Go to an existing ontology repository or create a new one.
 Execute
 
 ```
-copier ssh://git@gitlab.eccenca.com:8101/devops/ontology-pipeline.git .
+copier gh:eccenca/ontology-pipeline-template .
 ```
 
 Answer the questions.
@@ -35,6 +35,12 @@ If you have selected a CI option, your CI should execute the ontology pipeline.
 ## What it does
 
 Basically it fetches your ontology from cmem, commits it to the repo, does some steps on it, commits the results and then imports the resulting ontology to cmem again.
+
+## Trouble shooting
+
+**You want to migrate from a different template remote.**
+
+Open your `.copier-answers.yml` and change the current `_src_path` to `_src_path: gh:eccenca/ontology-pipeline-template`.
 
 ## TODO
 - Initial generation of turtle files

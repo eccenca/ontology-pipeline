@@ -10,6 +10,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Add
 
+- Add a trouble shooting section to the README
 -
 
 ### Fixed
@@ -18,7 +19,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Changed
 
--
+- Move the template repository to https://github.com/eccenca/ontology-pipeline-template
 
 ## [0.1.3] 2023-01-18
 
