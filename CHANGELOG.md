@@ -20,6 +20,12 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 -
 
+## [0.1.3] 2023-01-18
+
+### Changed
+
+- Remove shape generation containers per default
+
 ## [0.1.2] 2023-01-11
 
 ### Add

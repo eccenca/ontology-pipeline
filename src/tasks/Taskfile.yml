@@ -21,6 +21,7 @@ vars:
     sh: if [ -z "{{.DOCKER}}" ]; then echo {{.SHELL_PWD}}; else echo {{.DOCKER_PWD}}; fi
 
   DOCKER_DIRS: "-v {{.SHELL_PWD}}:{{.DOCKER_PWD}} --workdir {{.DOCKER_PWD}}"
+  DOCKER_PARAMS: "--rm"
 
 tasks:
 
