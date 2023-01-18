@@ -29,5 +29,5 @@ tasks:
       - copier --vcs-ref {{.TEMPLATE_REVISION}} --defaults . {{.ONTOLOGY_DIR}}
       - git -c init.defaultBranch=main init {{.ONTOLOGY_DIR}}
       - cd {{.ONTOLOGY_DIR}} && git add .
-      - cd {{.ONTOLOGY_DIR}} && git -c init.defaultBranch=main -c user.name="{{.GIT_USER_NAME}}" -c user.email="{{.GIT_USER_EMAIL}}" commit -m "init from template"
+      - cd {{.ONTOLOGY_DIR}} && git -c init.defaultBranch=main -c user.name="{{.TEST_GIT_USER_NAME}}" -c user.email="{{.TEST_GIT_USER_EMAIL}}" commit -m "init from template"
       - cd {{.ONTOLOGY_DIR}} && task ci cd
