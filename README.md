@@ -1,6 +1,6 @@
 # Ontology Pipeline
 
-[![version][version-shield]][changelog] [![workflow][build-shield]][github-actions] [![copier][copier-shield]][copier] [![eccenca Corporate Memory][cmem-shield]][cmem]
+[![version][version-shield]][changelog] [![copier][copier-shield]][copier] [![eccenca Corporate Memory][cmem-shield]][cmem]
 
 ## Requirements
 
@@ -62,3 +62,12 @@ Open your `.copier-answers.yml` and change the current `_src_path` to `_src_path
 
 ## Out if Scope
 - Get DI projects
+
+[version-shield]: https://img.shields.io/github/v/tag/eccenca/ontology-pipeline-template?label=version&sort=semver
+[changelog]: https://github.com/eccenca/ontology-pipeline-template/blob/main/CHANGELOG.md
+[github-actions]: https://github.com/eccenca/ontology-pipeline-template/actions
+[build-shield]: https://github.com/eccenca/ontology-pipeline-template/actions/workflows/check.yml/badge.svg
+[copier]: https://copier.readthedocs.io/
+[copier-shield]: https://img.shields.io/badge/made%20with-copier-orange
+[cmem]: https://documentation.eccenca.com
+[cmem-shield]: https://img.shields.io/badge/made%20for-Corporate%20Memory-blue
