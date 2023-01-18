@@ -1,19 +1,33 @@
 version: '3'
 
+vars:
+  ONTOLOGY_DIR: example-ontology
+  TEST_GIT_USER_NAME: "Anonymous Person"
+  TEST_GIT_USER_EMAIL: "anonymous@example.org"
+
 tasks:
 
   validate:
-    - python validate_yml.py copier.yml
-    - python validate_yml.py Taskfile.yml
-    - python validate_yml.py src/Taskfile.yml
-    - python validate_yml.py src/tasks/Taskfile.yml
-    - python validate_yml.py src/tasks/artifacts/Taskfile.yml
-    - python validate_yml.py src/tasks/delivery/Taskfile.yml
-    - python validate_yml.py src/tasks/helper/Taskfile.yml
-    - python validate_yml.py src/tasks/inference/Taskfile.yml
-    - python validate_yml.py src/tasks/preparation/Taskfile.yml
-    - python validate_yml.py src/tasks/preprocessing/Taskfile.yml
-    - python validate_yml.py src/tasks/shape_generation/Taskfile.yml
-    - python validate_yml.py src/tasks/synchronization/Taskfile.yml
-    - python validate_yml.py src/tasks/validation/Taskfile.yml
-    - python validate_yml.py src/tasks/version/Taskfile.yml
+    desc: Validate the syntax of all YAML files
+    cmds:
+      - find -name "*.yml" -exec python validate_yml.py {} \;
+
+  clean:
+    desc: Clean up working directory
+    cmds:
+      - rm -rf {{.ONTOLOGY_DIR}}
+
+  test:
+    desc: Create plugin with default answers and run check
+    deps:
+      - validate
+      - clean
+    vars:
+      TEMPLATE_REVISION:
+        sh: git rev-parse HEAD
+    cmds:
+      - copier --vcs-ref {{.TEMPLATE_REVISION}} --defaults . {{.ONTOLOGY_DIR}}
+      - git init {{.ONTOLOGY_DIR}}
+      - cd {{.ONTOLOGY_DIR}} && git add .
+      - cd {{.ONTOLOGY_DIR}} && git -c init.defaultBranch main -c user.name="{{.GIT_USER_NAME}}" -c user.email="{{.GIT_USER_EMAIL}}" commit -m "init from template"
+      - cd {{.ONTOLOGY_DIR}} && task ci cd
