@@ -11,7 +11,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 ### Add
 
 - Add a trouble shooting section to the README
--
+- Add shields to the README
 
 ### Fixed
 
