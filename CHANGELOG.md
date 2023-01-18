@@ -10,12 +10,13 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Add
 
-- Add a trouble shooting section to the README
-- Add shields to the README
+- Add a trouble shooting section to the `README`
+- Add shields to the `README`
+- Add `.gitignore` file to the template
 
 ### Fixed
 
--
+- Ensure prefixes are terminated by a colon `:`
 
 ### Changed
 
@@ -31,7 +32,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Add
 
-- Add list of generated artifacts to the README template
+- Add list of generated artifacts to the `README` template
 
 ## [0.1.1] 2023-01-11
 
@@ -39,18 +40,18 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 - Add documentation to the `cmemc_env_overwrite.py` script
 - Rename `cmem_id` to `cmemc_config_id`
-- Update README template, clarify `.gitignore` and requirements
-- Update README, add TODOs and requirements
+- Update `README` template, clarify `.gitignore` and requirements
+- Update `README`, add TODOs and requirements
 
 ## [0.1.0] 2023-01-10
 
 ### Fixed
 
-- Fix file names for graph files in README
+- Fix file names for graph files in `README`
 
 ### Changed
 
-- Update CHANGELOG
+- Update `CHANGELOG`
 - Quote git username in env file
 
 ## [0.0.5] 2023-01-10
@@ -87,5 +88,5 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Add
 
-- CHANGELOG ;-)
+- `CHANGELOG` ;-)
 - Setup the project
