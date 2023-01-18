@@ -1,0 +1,3 @@
+{% include 'prefixes.ttl' %}
+
+{{ ontology_prefix | replace(':', '') }}: a owl:Ontology .
