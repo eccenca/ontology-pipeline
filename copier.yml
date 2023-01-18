@@ -1,0 +1,108 @@
+# questions
+project_name:
+    type: str
+    help: What is your project name?
+
+ontology_file:
+    type: str
+    help: What is your ontology filename?
+    default: vocab.ttl
+
+ontology_prefix:
+    type: str
+    help: What is your ontologies namespace prefix?
+    default: "ex:"
+
+ontology_iri:
+    type: str
+    help: What is your ontologies namespace IRI?
+    default: http://example.org/
+
+ontology_graph_iri:
+    type: str
+    help: What is your ontologies Graphs IRI on the CMEM? (usually the same as the ontology IRI)
+    default: "{{ ontology_iri }}"
+
+shape:
+    type: bool
+    help: Do you want to manage SHACL shapes along with the vocabulary?
+    default: True
+
+shape_file:
+    type: str
+    help: What is your shapes filename?
+    default: shapes.ttl
+    when: "{{ shape }}"
+
+shape_base_prefix:
+    type: str
+    help: What is your shapes base namespace preifx?
+    default: "ex-sh:"
+    when: "{{ shape }}"
+
+shape_base_iri:
+    type: str
+    help: What is your shapes base namespace IRI?
+    default: http://example.org/shapes/
+    when: "{{ shape }}"
+
+shape_graph_iri:
+    type: str
+    help: What is your shapes graph IRI?
+    default: "{{ shape_base_iri }}"
+    when: "{{ shape }}"
+
+instances:
+    type: bool
+    help: Do you want to involve instances in the vocabulary management? (e.g. extract ontology from the instance data)
+    default: True
+
+instances_file_exists:
+    type: bool
+    help: Do you have a local instances file in the repository?
+    default: False
+
+instances_file:
+    type: str
+    help: What is your instances filename?
+    default: instances.ttl
+    when: "{{ instances_file_exists }}"
+
+instances_graph_iri:
+    type: str
+    help: What is your instances graph IRI?
+    default: http://data.example.org
+    when: "{{ instances }}"
+
+instances_cmem_id:
+    type: str
+    help: What is your CMEM instance with the instance data?
+    default: local
+    when: "{{ instances }}"
+
+git_user_name:
+    type: str
+    help: What should be the Git user name to commit changes?
+    default: Ontology Pipeline Bot
+
+git_user_email:
+    type: str
+    help: What should be the Git user email to commit changes?
+    default: ontology-pipeline@bot.eccenca.com
+
+git_push:
+    type: bool
+    help: Do you want to push the changes on delivery to the git remote?
+    default: True
+
+github_managed:
+    type: bool
+    help: Do you want the ontology pipeline to add GitHub Actions configuration?
+    default: False
+
+gitlab_managed:
+    type: bool
+    help: Do you want the ontology pipeline to add GitLab CI configuration (not yet implemented)?
+    default: False
+
+_subdirectory: src

@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+
+  validate:
+    - python validate_yml.py copier.yml
+    - python validate_yml.py Taskfile.yml
+    - python validate_yml.py src/Taskfile.yml
+    - python validate_yml.py src/tasks/Taskfile.yml
+    - python validate_yml.py src/tasks/artifacts/Taskfile.yml
+    - python validate_yml.py src/tasks/delivery/Taskfile.yml
+    - python validate_yml.py src/tasks/helper/Taskfile.yml
+    - python validate_yml.py src/tasks/inference/Taskfile.yml
+    - python validate_yml.py src/tasks/preparation/Taskfile.yml
+    - python validate_yml.py src/tasks/preprocessing/Taskfile.yml
+    - python validate_yml.py src/tasks/shape_generation/Taskfile.yml
+    - python validate_yml.py src/tasks/synchronization/Taskfile.yml
+    - python validate_yml.py src/tasks/validation/Taskfile.yml
+    - python validate_yml.py src/tasks/version/Taskfile.yml

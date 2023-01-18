@@ -1,0 +1,38 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+construct {
+  ?class a rdfs:Class, owl:Class ;
+    rdfs:label ?label .
+}
+from <{{ instances_graph_iri }}>
+{% if ontology_graph_iri %}from named <{{ontology_graph_iri}}>{% endif %}
+{% if shape %}from named <{{shape_graph_iri}}>{% endif %}
+WHERE {
+  ?s a ?class .
+  optional { ?class rdfs:label ?label }
+  filter regex(str(?class), "^{{ ontology_iri }}")
+  filter not exists {
+    {
+    	graph <{{ ontology_graph_iri }}> {
+        {
+          ?sub sh:targetClass ?class .
+        } union {
+          ?class a ?classType.
+        }
+      }
+    }
+    {% if shape %}
+    union {
+    	graph <{{ shape_graph_iri }}> {
+        {
+          ?sub sh:targetClass ?class .
+        } union {
+          ?class a ?classType.
+        }
+      }
+    }
+    {% endif %}
+  }
+}

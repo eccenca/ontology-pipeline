@@ -1,0 +1,38 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+construct {
+  ?prop a rdf:Property ; # DatatypeProperty, ObjectProperty
+    rdfs:label ?label .
+    # domain, range
+}
+from <{{ instances_graph_iri }}>
+{% if ontology_graph_iri %}from named <{{ontology_graph_iri}}>{% endif %}
+{% if shape %}from named <{{shape_graph_iri}}>{% endif %}
+WHERE {
+  ?s ?prop ?o .
+  optional { ?prop rdfs:label ?label }
+  filter regex(str(?class), "^{{ ontology_iri }}")
+  filter not exists {
+    {
+    	graph <{{ ontology_graph_iri }}> {
+        {
+          ?sub sh:path ?prop .
+        } union {
+          ?prop a ?propertyType.
+        }
+      }
+    }
+    {% if shape %}
+    union {
+    	graph <{{ shape_graph_iri }}> {
+        {
+          ?sub sh:path ?prop .
+        } union {
+          ?prop a ?propertyType.
+        }
+      }
+    }
+    {% endif %}
+  }
+}

@@ -1,0 +1,24 @@
+{%- set ontology_file_name = ontology_file | replace('.nt', '') | replace('.ttl', '') -%}
+{%- set shape_file_name = shape_file | replace('.nt', '') | replace('.ttl', '') -%}
+# {{ project_name }}
+
+Ontology Repository
+
+## Requirements
+- [docker](https://www.docker.com/), [podman](https://podman.io/), or a compatible container engine
+- [task](https://taskfile.dev/)
+- [copier](https://copier.readthedocs.io/)
+
+## TODO
+
+- [ ] 🛠️ Adjust config in `cmemc.ini` (Find details on [documentation.eccenca.com](https://documentation.eccenca.com/latest/automate/cmemc-command-line-interface/configuration/file-based-configuration/))
+- [ ] 📡 Make sure to setup a remote for `git push`
+- [ ] 🔗 Create a `prefixes.ttl`
+- [ ] 📑 Make sure `{{ ontology_file_name }}.ttl`, `{{ ontology_file_name }}.nt`, and `{{ ontology_file_name }}.graph.nt` exist
+{%- if shape %}- [ ] 📝 Make sure `{{ shape_file_name }}.ttl`, `{{ shape_file_name }}.nt`, and `{{ shape_file_name }}.graph.nt` exist{% endif %}
+- [ ] 🤷 Add `artifacts`, `_run` and `_tmp` to your `.gitignore` file
+- [ ] 💾 Commit the newly created files
+
+## Usage
+
+In the directory `resources/queries/` you can add files with [SPARQL 1.1 Construct](https://www.w3.org/TR/sparql11-query/#construct) queries to extract data from your cmem instance during the run.

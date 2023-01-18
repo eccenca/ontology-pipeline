@@ -1,0 +1,29 @@
+name: Ontology Pipeline CD
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  BRANCH: main
+  OAUTH_CLIENT_ID: ${{ secrets.CMEM_OAUTH_CLIENT_ID }}
+  OAUTH_CLIENT_SECRET: ${{ secrets.CMEM_OAUTH_CLIENT_SECRET }}
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: arduino/setup-task@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v3
+      with:
+        ref: ${{ env.BRANCH }}
+    - name: Run CI Tasks ⚙️
+      run: task ci cd
+    - name: Upload the resulting artifacts 📡
+      uses: actions/upload-artifact@v3
+      with:
+        name: Pipeline artifacts
+        path: artifacts
