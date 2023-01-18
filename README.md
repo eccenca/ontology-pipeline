@@ -1,5 +1,7 @@
 # Ontology Pipeline
 
+[![version][version-shield]][changelog] [![workflow][build-shield]][github-actions] [![copier][copier-shield]][copier] [![eccenca Corporate Memory][cmem-shield]][cmem]
+
 ## Requirements
 
 To initialize an ontology repository with the ontology pipeline and update it you need:
