@@ -5,7 +5,7 @@
 ## Requirements
 
 To initialize an ontology repository with the ontology pipeline and update it you need:
-- [Copier](https://copier.readthedocs.io/) (runs on Python 3)
+- [Copier](https://copier.readthedocs.io/) (minimum 6.0.0, better use 7.0.1 or higher; runs on Python 3)
 
 To execute the ontology pipeline you need:
 - [Task](https://taskfile.dev/)
