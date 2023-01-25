@@ -14,7 +14,8 @@ To execute the ontology pipeline you need:
 
 ## How to use
 
-Go to an existing ontology repository or create a new one.
+Go to an existing git repository with your ontology or simply create a new git repository (e.g. `git init my-ontology`).
+
 Execute
 
 ```
