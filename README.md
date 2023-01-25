@@ -14,15 +14,16 @@ To execute the ontology pipeline you need:
 
 ## How to use
 
-Go to an existing git repository with your ontology or simply create a new git repository (e.g. `git init my-ontology`).
+1. Go to an existing git repository with your ontology or simply create a new git repository (e.g. `git init my-ontology`).
 
-Execute
+2. Execute
 
 ```
 copier gh:eccenca/ontology-pipeline-template .
 ```
 
-Answer the questions.
+3. Answer the questions.
+
 Copier will overwrite your `README.md` if you had one already. Adjust the `README.md` according to your needs. Make sure to go through the `TODO` section.
 Add all of the newly created files to the repository and push it.
 You can now execute the ontology pipeline:
