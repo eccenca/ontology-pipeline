@@ -10,6 +10,20 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Add
 
+-
+
+### Fixed
+
+-
+
+### Changed
+
+-
+
+## [0.1.4] 2023-01-25
+
+### Add
+
 - Add a trouble shooting section to the `README`
 - Add shields to the `README`
 - Clarify setup process in the `README`
