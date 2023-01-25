@@ -18,6 +18,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 ### Fixed
 
 - Ensure prefixes are terminated by a colon `:`
+- Fix conditional execution of cmemc_env_overwrite
 
 ### Changed
 
