@@ -61,6 +61,7 @@ instances_file_exists:
     type: bool
     help: Do you have a local instances file in the repository?
     default: False
+    when: "{{ instances }}"
 
 instances_file:
     type: str
