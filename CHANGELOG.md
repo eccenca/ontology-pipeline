@@ -12,6 +12,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 - Add a trouble shooting section to the `README`
 - Add shields to the `README`
+- Clarify setup process in the `README`
 - Add `.gitignore` file to the template
 
 ### Fixed
