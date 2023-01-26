@@ -54,9 +54,10 @@ Many variables are already set with the values you have given to copier in the `
 Don't edit this file since it might be overwritten when running `copier update` resp. `task update`.
 To overwrite variable or set additional variables create a file `.env` in the root of the repository.
 
-| Variable Name         | Step              | Description                                                       | Default                        |
---------------------------------------------------------------------------------------------------------------------------------------------------
-| `CMEMC_DOCKER_PARAMS` | shape_generation  | Configure additional docker parameters for the execution of cmemc | `-v $PWD/cmemc.ini:/cmemc.ini` |
+| Variable Name         | Step              | Description                                                                    | Default                        |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| `GIT_PUSH`            | cd                | If it is not `False` a `git push` will be executed at the end of the `cd` task | `True` |
+| `CMEMC_DOCKER_PARAMS` | shape_generation  | Configure additional docker parameters for the execution of cmemc              | `-v $PWD/cmemc.ini:/cmemc.ini` |
 
 
 ## Trouble shooting
