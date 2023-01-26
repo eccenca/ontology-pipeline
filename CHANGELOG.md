@@ -14,7 +14,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Fixed
 
--
+- Remove whitespace
 
 ### Changed
 

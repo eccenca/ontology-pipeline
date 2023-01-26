@@ -13,8 +13,8 @@ tasks:
     desc: Generate the shapes from the ontology
     cmds:
       - mkdir -p _run/artifacts_shape_generation_from_ontology
-      - cp {{.SHELL_PWD}}/{{.ONTOLOGY_FILE}}.ttl  _run/artifacts_shape_generation_from_ontology/ontology.ttl
-      - cp {{.SHELL_PWD}}/prefixes.ttl  _run/artifacts_shape_generation_from_ontology/prefixes.ttl
+      - cp {{.SHELL_PWD}}/{{.ONTOLOGY_FILE}}.ttl _run/artifacts_shape_generation_from_ontology/ontology.ttl
+      - cp {{.SHELL_PWD}}/prefixes.ttl _run/artifacts_shape_generation_from_ontology/prefixes.ttl
       - task: gramo:extractor
         vars:
           DOCKER_DIRS: '-v {{.SHELL_PWD}}/_run/artifacts_shape_generation_from_ontology:{{.DOCKER_PWD}}'
@@ -27,8 +27,8 @@ tasks:
     desc: Merge two shape graphs into a new shape graph
     cmds:
       - mkdir -p _run/artifacts_shape_generation_merge
-      - cp {{.SHELL_PWD}}/{{.SHAPE_FILE}}.ttl  _run/artifacts_shape_generation_merge/shapes.ttl
-      - cp artifacts/{{.SHAPE_FILE}}_extracted_ontology.ttl  _run/artifacts_shape_generation_merge/shapes_extracted_ontology.ttl
+      - cp {{.SHELL_PWD}}/{{.SHAPE_FILE}}.ttl _run/artifacts_shape_generation_merge/shapes.ttl
+      - cp artifacts/{{.SHAPE_FILE}}_extracted_ontology.ttl _run/artifacts_shape_generation_merge/shapes_extracted_ontology.ttl
       - task: gramo:reshaper
         vars:
           DOCKER_DIRS: '-v {{.SHELL_PWD}}/_run/artifacts_shape_generation_merge:{{.DOCKER_PWD}}'
