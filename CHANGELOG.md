@@ -15,10 +15,11 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 ### Fixed
 
 - Remove whitespace
+-
 
 ### Changed
 
--
+- Rename `CMEMC_PARAMS` to `CMEMC_DOCKER_PARAMS`
 
 ## [0.1.4] 2023-01-25
 
