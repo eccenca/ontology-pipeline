@@ -40,11 +40,36 @@ If you have selected a CI option, your CI should execute the ontology pipeline.
 
 Basically it fetches your ontology from cmem, commits it to the repo, does some steps on it, commits the results and then imports the resulting ontology to cmem again.
 
+
+## Configuration and Customization
+
+The execution of the ontology pipeline can be further configured by queries and variables.
+
+### Queries
+In the directory `resources/queries/` you can add files with [SPARQL 1.1 Construct](https://www.w3.org/TR/sparql11-query/#construct) queries to extract data from your cmem instance during the run.
+
+### Variables
+
+Many variables are already set with the values you have given to copier in the `.copier-answers.env` file.
+Don't edit this file since it might be overwritten when running `copier update` resp. `task update`.
+To overwrite variable or set additional variables create a file `.env` in the root of the repository.
+
+| Variable Name         | Step              | Description                                                       | Default                        |
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| `CMEMC_DOCKER_PARAMS` | shape_generation  | Configure additional docker parameters for the execution of cmemc | `-v $PWD/cmemc.ini:/cmemc.ini` |
+
+
 ## Trouble shooting
 
-**You want to migrate from a different template remote.**
+### Migrate from a different template remote
 
 Open your `.copier-answers.yml` and change the current `_src_path` to `_src_path: gh:eccenca/ontology-pipeline-template`.
+
+### Connect to a local CMEM orchestration
+
+If you are running your CMEM orchestration locally you need to connect cmemc to the docker/podman network of your orchestration.
+To achieve that create a file called `.env` in your repository.
+In it define the variable `CMEMC_DOCKER_PARAMS="-v $PWD/cmemc.ini:/cmemc.ini --network conmtainer:<container_id>"`, where `<container_id>` is the container id of the apache2 container in your cmem orchestration.
 
 ## TODO
 - Initial generation of turtle files

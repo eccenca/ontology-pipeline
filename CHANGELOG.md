@@ -15,7 +15,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 ### Fixed
 
 - Remove whitespace
--
+- Improve documentation in README and README template
 
 ### Changed
 

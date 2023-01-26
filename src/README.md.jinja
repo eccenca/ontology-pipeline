@@ -5,10 +5,13 @@
 Ontology Repository
 
 ## Requirements
+
 To execute the ontology pipeline you need:
 - [Task](https://taskfile.dev/)
 - [Docker](https://www.docker.com/), [Podman](https://podman.io/), or a compatible container engine
 - [Python 3](https://www.python.org/)
+
+Further documentation of the ontology pipeline is available at https://github.com/eccenca/ontology-pipeline-template .
 
 ## TODO
 
@@ -21,15 +24,11 @@ To execute the ontology pipeline you need:
 {%- endif %}
 - [ ] 💾 Commit the newly created files
 
-## Usage
-
-In the directory `resources/queries/` you can add files with [SPARQL 1.1 Construct](https://www.w3.org/TR/sparql11-query/#construct) queries to extract data from your cmem instance during the run.
-
 ## Build Artifacts
 
 The build artifacts are generated in the directory `artifacts`. In the GitHub Action Workflow the artifacts are attached to a successful build.
 
-### Pipeline artifacts
+### Pipeline Artifacts
 - The Ontology Documentation:
   - `schema-documentation.html`
 - The RDFUnit test results:
