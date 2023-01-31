@@ -16,6 +16,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 - Remove whitespace
 - Improve documentation in README and README template
+- Skip deployment of shapes if shapes are disabled
 
 ### Changed
 

@@ -106,3 +106,5 @@ tasks:
         vars: { FILE: '{{.ONTOLOGY_FILE}}', CMEMC_CONFIG_ID: '{{.CMEMC_CONFIG_ID}}' }
       - task: delivery:deploy_shapes_to_cmem
         vars: { GRAPH_IRI: '{{.SHAPE_IRI}}', FILE: '{{.SHAPE_FILE}}', CMEMC_CONFIG_ID: '{{.CMEMC_CONFIG_ID}}' }
+        status:
+          - '[ ${SHAPE} = "False" ]'
