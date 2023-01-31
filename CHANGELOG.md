@@ -14,6 +14,16 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Fixed
 
+-
+
+### Changed
+
+-
+
+## [0.2.0] 2023-01-31
+
+### Fixed
+
 - Remove whitespace
 - Improve documentation in README and README template
 - Skip deployment of shapes if shapes are disabled
