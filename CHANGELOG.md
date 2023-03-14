@@ -15,6 +15,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 ### Fixed
 
 - Fix typo in questions
+- Remove trailing hash from vocabulary documentation file base name
 
 ### Changed
 

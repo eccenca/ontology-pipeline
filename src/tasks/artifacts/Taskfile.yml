@@ -7,7 +7,7 @@ tasks:
   documentation:ontology:
     vars:
       DOCUMENTATION_FILE:
-        sh: "BASE_IRI={{.BASE_IRI}}; BASE_NAME=${BASE_IRI##*/}; echo ${BASE_NAME:-index}.html"
+        sh: "BASE_IRI={{.BASE_IRI}}; BASE_NAME=${BASE_IRI##*/}; BASE_NAME=${BASE_NAME%#}; echo ${BASE_NAME:-index}.html"
     cmds:
       - mkdir -p _run/artifacts_documentation_ontology
       - cp {{.FILE}}.ttl _run/artifacts_documentation_ontology/ontology.ttl
