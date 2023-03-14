@@ -19,7 +19,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Changed
 
--
+- Update README, add some development instructions
 
 ## [0.2.0] 2023-01-31
 

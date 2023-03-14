@@ -72,6 +72,24 @@ If you are running your CMEM orchestration locally you need to connect cmemc to 
 To achieve that create a file called `.env` in your repository.
 In it define the variable `CMEMC_DOCKER_PARAMS="-v $PWD/cmemc.ini:/cmemc.ini --network conmtainer:<container_id>"`, where `<container_id>` is the container id of the apache2 container in your cmem orchestration.
 
+## Development Setup
+
+To get a development setup you need to checkout this `ontology-pipeline-template` repository and create a second repository with an ontology using the copier template.
+To initialize your ontology repository with your build environment run.
+```
+copier --vcs-ref HEAD path/to/template/repository path/to/ontology/repository
+```
+
+To simply switch your ontology repository to the latest development state of this repository run
+
+```
+copier --vcs-ref main update
+# or
+copier --vcs-ref HEAD update
+```
+
+To switch the remote template repository check out [Trouble shooting](#trouble-shooting) > [Migrate from a different template remote](#migrate-from-a-different-template-remote).
+
 ## TODO
 - Initial generation of turtle files
 - How to deal with `.gitignore` and similar files updated and used by multiple tools
