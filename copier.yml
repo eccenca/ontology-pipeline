@@ -36,7 +36,7 @@ shape_file:
 
 shape_base_prefix:
     type: str
-    help: What is your shapes base namespace preifx?
+    help: What is your shapes base namespace prefix?
     default: "ex-sh:"
     when: "{{ shape }}"
 
