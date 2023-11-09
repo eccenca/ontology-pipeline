@@ -1,4 +1,5 @@
 # questions
+---
 project_name:
     type: str
     help: What is your project name?
@@ -16,17 +17,19 @@ ontology_prefix:
 ontology_iri:
     type: str
     help: What is your ontologies namespace IRI?
-    default: http://example.org/
+    default: https://example.org/vocab/
 
 ontology_graph_iri:
     type: str
-    help: What is your ontologies Graphs IRI on the CMEM? (usually the same as the ontology IRI)
+    help: >
+      What is your ontology's Graph IRI on Corporate Memory?
+      (usually the same as the ontology IRI)
     default: "{{ ontology_iri }}"
 
 shape:
     type: bool
     help: Do you want to manage SHACL shapes along with the vocabulary?
-    default: True
+    default: true
 
 shape_file:
     type: str
@@ -43,7 +46,7 @@ shape_base_prefix:
 shape_base_iri:
     type: str
     help: What is your shapes base namespace IRI?
-    default: http://example.org/shapes/
+    default: "{{ ontology_iri }}/shapes/"
     when: "{{ shape }}"
 
 shape_graph_iri:
@@ -54,13 +57,15 @@ shape_graph_iri:
 
 instances:
     type: bool
-    help: Do you want to involve instances in the vocabulary management? (e.g. extract ontology from the instance data)
-    default: True
+    help: >
+      Do you want to involve instances in the vocabulary management?
+      (e.g. extract ontology from the instance data)
+    default: true
 
 instances_file_exists:
     type: bool
     help: Do you have a local instances file in the repository?
-    default: False
+    default: false
     when: "{{ instances }}"
 
 instances_file:
@@ -72,12 +77,14 @@ instances_file:
 instances_graph_iri:
     type: str
     help: What is your instances graph IRI?
-    default: http://data.example.org
+    default: "{{ ontology_iri }}/instances/"
     when: "{{ instances }}"
 
 cmemc_config_id:
     type: str
-    help: What is your CMEM instance with which you want to sync?
+    help: >
+      What is the cmemc config identifier of your used Corporate Memory
+      you want to sync?
     default: local
 
 git_user_name:
@@ -93,16 +100,19 @@ git_user_email:
 git_push:
     type: bool
     help: Do you want to push the changes on delivery to the git remote?
-    default: True
+    default: true
 
 github_managed:
     type: bool
     help: Do you want the ontology pipeline to add GitHub Actions configuration?
-    default: False
+    default: false
 
 gitlab_managed:
     type: bool
-    help: Do you want the ontology pipeline to add GitLab CI configuration (not yet implemented)?
-    default: False
+    help: >
+      Do you want the ontology pipeline to add GitLab CI configuration
+      (not yet implemented)?
+    default: false
 
 _subdirectory: src
+

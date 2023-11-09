@@ -18,7 +18,7 @@ jobs:
     - uses: arduino/setup-task@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         ref: ${{ env.BRANCH }}
     - name: Run CI Tasks ⚙️
