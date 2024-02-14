@@ -10,18 +10,22 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Add
 
--
+### Fixed
+
+### Changed
+
+## [0.2.1] 2024-02-14
+
+### Add
+
+- Update README, add some development instructions
 
 ### Fixed
 
 - Fix typo in questions
 - Remove trailing hash from vocabulary documentation file base name
 - Add trailing slash to default instances graph
-
-### Changed
-
-- Update README, add some development instructions
-- Update to calling `copier copy …`
+- Fix behaviour to latest copier version by calling `copier copy …`
 
 ## [0.2.0] 2023-01-31
 
