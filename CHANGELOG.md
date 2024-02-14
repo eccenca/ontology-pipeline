@@ -16,10 +16,12 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 - Fix typo in questions
 - Remove trailing hash from vocabulary documentation file base name
+- Add trailing slash to default instances graph
 
 ### Changed
 
 - Update README, add some development instructions
+- Update to calling `copier copy …`
 
 ## [0.2.0] 2023-01-31
 
