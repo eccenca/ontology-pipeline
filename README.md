@@ -19,7 +19,7 @@ To execute the ontology pipeline you need:
 2. In the ontology repository execute:
 
 ```
-copier gh:eccenca/ontology-pipeline-template .
+copier copy gh:eccenca/ontology-pipeline-template .
 ```
 
 3. Answer the questions.
