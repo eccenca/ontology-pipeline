@@ -19,6 +19,10 @@ tasks:
       - mkdir -p artifacts
       - cp _run/artifacts_documentation_ontology/_site/{{.DOCUMENTATION_FILE}} artifacts/ontology-documentation.html
 
+  documentation:ontology-visualization:
+    cmds:
+      - echo "To be implemented with owl2dot"
+
   documentation:shapes:
     cmds:
       - echo "Shape Documentation not yet implemented"
