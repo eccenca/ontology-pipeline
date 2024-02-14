@@ -14,6 +14,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 - Fix `task test` to also have a default project name
 - Fix `init.defaultBranch` configuration in `task test`
+- Fix user and email variables for `task test`
 
 ### Changed
 
