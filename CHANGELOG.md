@@ -12,6 +12,8 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ### Fixed
 
+- Fix `task test` to also have a default project name
+
 ### Changed
 
 ## [0.2.1] 2024-02-14
