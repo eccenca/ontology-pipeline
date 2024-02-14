@@ -72,7 +72,7 @@ instances_file:
 instances_graph_iri:
     type: str
     help: What is your instances graph IRI?
-    default: http://data.example.org
+    default: http://data.example.org/
     when: "{{ instances }}"
 
 cmemc_config_id:
